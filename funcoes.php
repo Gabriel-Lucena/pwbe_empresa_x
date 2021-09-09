@@ -1,32 +1,36 @@
 <?php
 
-// Recebe o nome do arquivo
-function lerArquivo($nomearquivo)
+function lerArquivo($nomeArquivo)
 {
-    // Lê o arquivo como String
-    $arquivo = file_get_contents($nomearquivo);
+    $arquivo = file_get_contents($nomeArquivo);
 
-    // Transforma a string em array
     $jsonArray = json_decode($arquivo);
 
-    // Devolve a array
     return $jsonArray;
 }
-
-/*
-    Busca o aluno dentro da lista e devolve uma lista com os funcionários encontrados
-*/
 
 function buscarFuncionario($funcionarios, $nome)
 {
     $funcionarioFiltro = [];
     foreach ($funcionarios as $funcionario) {
 
-        if ($funcionario->first_name == $nome) {
+        if (strpos($funcionario->first_name, $nome) !== false 
+        || strpos($funcionario->last_name, $nome) !== false 
+        || strpos($funcionario->department, $nome) !== false
+        ) {
 
             $funcionarioFiltro[] = $funcionario;
         }
     }
-
     return $funcionarioFiltro;
+}
+
+function adicionarFuncionario(array $funcionario)
+{
+    $funcionarios = lerArquivo('empresaX.json');
+    $id = count($funcionarios) + 1;
+    $funcionario['id'] = $id;
+    $funcionarios[] = $funcionario;
+    $json = json_encode($funcionarios);
+    file_put_contents('empresaX.json', $json);
 }
