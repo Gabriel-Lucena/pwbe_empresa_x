@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+input {
+  width: 80%;
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid rgb(180, 29, 122);
+  margin-bottom: 15px;
+}
+
+button {
+  width: 8%;
+  padding: 5px;
+  background-color: rgb(255, 0, 191);
+  border-radius: 5px;
+  color: white;
+  border: 1px solid rgb(180, 29, 122);
+}
+
+section {
+  max-width: 1%;
+  width: 1%;
+  background-color: rgb(135, 122, 253);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 10px rgb(132, 0, 255);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgb(247, 93, 188);
+  border-collapse: collapse;
+}
+
+table tr:hover {
+  cursor: pointer;
+  background-color: rgb(109, 94, 248);
+}
+
+table td, th {
+  border: 1px solid rgb(247, 93, 188);
+  padding: 10px;
+}
+
+#add__new {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+#add__new:hover {
+  transform: scale(1.1);
+  background-color: #424242;
+}
+
+#add__new p {
+  font-size: 32px;
+  color: white;
+}
+
+#container__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#container__modal #bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #12121233;
+}
+
+#container__modal .modal {
+  background-color: white;
+  width: 600px;
+  position: absolute;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  border: 1px solid rgb(247, 93, 188);
+  box-shadow: 1px 5px 30px 10px rgb(22, 1, 80);
+}
+
+#container__modal .modal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#container__modal .modal form input, #container__modal .modal form select {
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #868686;
+  padding: 0 12px;
+  outline: none;
+}
+
+#container__modal .modal form select {
+  color: #868686;
+}
+
+#container__modal .modal form input:focus, #container__modal .modal form select:focus {
+  border: 2px solid #2b2b2b;
+  border-radius: 8px;
+  padding: 0 11px;
+}
+
+#container__modal .modal form .buttons {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+#container__modal .modal form button {
+  height: 50px;
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cancel {
+  background-color: darkmagenta;
+}
+
+#send {
+  background-color: deeppink;
+}
