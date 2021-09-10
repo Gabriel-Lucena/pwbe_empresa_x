@@ -29,14 +29,7 @@ if (
     header('location:' . dirname($_SERVER['PHP_SELF']));
 }
 
-// $values = json_encode($_POST);
-// file_put_contents('nome_e_path_do_arquivo.ext', $values, FILE_APPEND);
-
-// adicionarFuncionario($funcionarios);
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -56,8 +49,8 @@ if (
 
     <form>
         <label for="buscarFuncionario">Digite o nome:</label>
-        <input type="text" placeholder="Digite o funcionário" name="buscarFuncionario" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>">
-        <button>Buscar</button>
+        <input type="text" required placeholder="Digite o funcionário" name="buscarFuncionario" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>">
+        <button class="buttonBuscar">Buscar</button>
 
     </form>
     <table border="1">
@@ -70,6 +63,7 @@ if (
             <th>Endereço IP</th>
             <th>País</th>
             <th>Departamento</th>
+            <th>Excluir?</th>
         </tr>
 
         <?php
@@ -85,6 +79,7 @@ if (
                 <td><?= $funcionario->ip_address ?></td>
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
+                <td><button id="excluir">Aniquilar</button></td>
             </tr>
 
         <?php
@@ -92,11 +87,12 @@ if (
         ?>
 
     </table>
+
     <div id="add__new">
         <p>+</p>
     </div>
     <div id="container__modal">
-        <!-- <div id="bg"></div> -->
+        <div id="bg"></div>
         <div class="modal">
             <h2>Adição de novo funcionário</h2>
             <form>
@@ -106,7 +102,7 @@ if (
                 <select name="gender" id="gender" required placeholder="Sexo">
                     <option value="Male">Masculino</option>
                     <option value="Female">Feminino</option>
-                    <option value="Other">Outros</option>
+                    <option value="WarMachine">Máquina de Combate</option>
                 </select>
                 <input type="text" name="ip_address" required placeholder="Endereço IP">
                 <input type="text" name="country" required placeholder="País">
@@ -115,6 +111,18 @@ if (
                     <button id="cancel" type="button">Cancelar</button>
                     <button id="send">Adicionar</button>
                 </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalExcluir">
+        <div id="bg"></div>
+        <div class="modal">
+            <h2>Atenção</h2>
+            <form>
+                <h3>Você tem certeza que quer destruir a vida desse jovem?</h3>
+                <button id="buttonSim">Quero. Sou maluco.</button>
+                <button id="buttonNao">Pensando bem... acho que não.</button>
             </form>
         </div>
     </div>
