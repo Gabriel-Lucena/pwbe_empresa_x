@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
   justify-content: center;
   font-family: sans-serif;
   height: 100vh;
+  padding: 50px;
 }
 
 input {
@@ -21,13 +22,22 @@ input {
   margin-bottom: 15px;
 }
 
-button {
-  width: 8%;
+.buttonBuscar {
+  width: 55px;
   padding: 5px;
   background-color: rgb(255, 0, 191);
   border-radius: 5px;
   color: white;
   border: 1px solid rgb(180, 29, 122);
+}
+
+#excluir {
+  background-color: rgb(255, 0, 191);
+  border-radius: 5px;
+  color: white;
+  border: 1px solid rgb(180, 29, 122);
+  width: 100px;
+  height: 25px;
 }
 
 section {
@@ -61,7 +71,8 @@ table tr:hover {
   background-color: rgb(109, 94, 248);
 }
 
-table td, th {
+table td,
+th {
   border: 1px solid rgb(247, 93, 188);
   padding: 10px;
 }
@@ -77,14 +88,14 @@ table td, th {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: black;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: rgb(247, 93, 188);
+  box-shadow: rgba(175, 2, 255, 0.514) 0px 7px 29px 0px;
   transition: all 0.2s ease-in-out;
 }
 
 #add__new:hover {
   transform: scale(1.1);
-  background-color: #424242;
+  background-color: #670081;
 }
 
 #add__new p {
@@ -133,7 +144,8 @@ table td, th {
   gap: 12px;
 }
 
-#container__modal .modal form input, #container__modal .modal form select {
+#container__modal .modal form input,
+#container__modal .modal form select {
   height: 50px;
   border: none;
   border-radius: 8px;
@@ -144,9 +156,12 @@ table td, th {
 
 #container__modal .modal form select {
   color: #868686;
+  max-width: 427px;
+  margin-bottom: 15px;
 }
 
-#container__modal .modal form input:focus, #container__modal .modal form select:focus {
+#container__modal .modal form input:focus,
+#container__modal .modal form select:focus {
   border: 2px solid #2b2b2b;
   border-radius: 8px;
   padding: 0 11px;
@@ -174,4 +189,51 @@ table td, th {
 
 #send {
   background-color: deeppink;
+}
+
+#modalExcluir {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalExcluir #bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #12121233;
+  display: flex;
+}
+
+#modalExcluir .modal {
+  background-color: white;
+  width: 600px;
+  position: absolute;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  border: 1px solid rgb(247, 93, 188);
+  box-shadow: 1px 5px 30px 10px rgb(22, 1, 80);
+}
+
+#modalExcluir button {
+  height: 50px;
+  flex: 1;
+  border: 1px solid rgb(247, 93, 188);
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 15px;
 }
