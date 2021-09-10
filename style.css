@@ -18,24 +18,24 @@ input {
   outline: none;
   padding: 5px;
   border: none;
-  border-bottom: 1px solid rgb(180, 29, 122);
+  border-bottom: 1px solid Tomato;
   margin-bottom: 15px;
 }
 
 .buttonBuscar {
   width: 55px;
   padding: 5px;
-  background-color: rgb(255, 0, 191);
+  background-color: Orange;
   border-radius: 5px;
   color: white;
-  border: 1px solid rgb(180, 29, 122);
+  border: 1px solid Tomato;
 }
 
 #excluir {
-  background-color: rgb(255, 0, 191);
+  background-color: Orange;
   border-radius: 5px;
   color: white;
-  border: 1px solid rgb(180, 29, 122);
+  border: 1px solid Tomato;
   width: 100px;
   height: 25px;
 }
@@ -62,7 +62,7 @@ h1 {
 table {
   width: 100%;
   text-align: left;
-  border: 1px solid rgb(247, 93, 188);
+  border: 1px solid Tomato;
   border-collapse: collapse;
 }
 
@@ -73,7 +73,7 @@ table tr:hover {
 
 table td,
 th {
-  border: 1px solid rgb(247, 93, 188);
+  border: 1px solid Coral;
   padding: 10px;
 }
 
@@ -88,14 +88,14 @@ th {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: rgb(247, 93, 188);
-  box-shadow: rgba(175, 2, 255, 0.514) 0px 7px 29px 0px;
+  background-color: OrangeRed;
+  box-shadow: Salmon 0px 7px 29px 0px;
   transition: all 0.2s ease-in-out;
 }
 
 #add__new:hover {
   transform: scale(1.1);
-  background-color: #670081;
+  background-color: OrangeRed;
 }
 
 #add__new p {
@@ -133,7 +133,7 @@ th {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  border: 1px solid rgb(247, 93, 188);
+  border: 1px solid Coral;
   box-shadow: 1px 5px 30px 10px rgb(22, 1, 80);
 }
 
@@ -184,11 +184,11 @@ th {
 }
 
 #cancel {
-  background-color: darkmagenta;
+  background-color: Salmon;
 }
 
 #send {
-  background-color: deeppink;
+  background-color: Coral;
 }
 
 #modalExcluir {
@@ -222,14 +222,14 @@ th {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  border: 1px solid rgb(247, 93, 188);
+  border: 1px solid Coral;
   box-shadow: 1px 5px 30px 10px rgb(22, 1, 80);
 }
 
 #modalExcluir button {
   height: 50px;
   flex: 1;
-  border: 1px solid rgb(247, 93, 188);
+  border: 1px solid Coral;
   border-radius: 8px;
   color: rgb(0, 0, 0);
   font-weight: bold;

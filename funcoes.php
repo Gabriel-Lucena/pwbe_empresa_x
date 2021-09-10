@@ -14,9 +14,10 @@ function buscarFuncionario($funcionarios, $nome)
     $funcionarioFiltro = [];
     foreach ($funcionarios as $funcionario) {
 
-        if (strpos($funcionario->first_name, $nome) !== false 
-        || strpos($funcionario->last_name, $nome) !== false 
-        || strpos($funcionario->department, $nome) !== false
+        if (
+            strpos($funcionario->first_name, $nome) !== false
+            || strpos($funcionario->last_name, $nome) !== false
+            || strpos($funcionario->department, $nome) !== false
         ) {
 
             $funcionarioFiltro[] = $funcionario;

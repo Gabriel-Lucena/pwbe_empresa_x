@@ -49,7 +49,7 @@ if (
 
     <form>
         <label for="buscarFuncionario">Digite o nome:</label>
-        <input type="text" required placeholder="Digite o funcionário" name="buscarFuncionario" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>">
+        <input type="text" required name="buscarFuncionario" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>">
         <button class="buttonBuscar">Buscar</button>
 
     </form>
