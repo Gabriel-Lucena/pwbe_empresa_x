@@ -14,7 +14,7 @@ body {
 }
 
 input {
-  width: 80%;
+  width: 100%;
   outline: none;
   padding: 5px;
   border: none;
@@ -68,13 +68,14 @@ table {
 
 table tr:hover {
   cursor: pointer;
-  background-color: rgb(109, 94, 248);
+  /* background-color: rgb(109, 94, 248); */
 }
 
 table td,
 th {
   border: 1px solid Coral;
   padding: 10px;
+  text-align: center;
 }
 
 #add__new {
@@ -123,7 +124,7 @@ th {
 
 #container__modal .modal {
   background-color: white;
-  width: 600px;
+  width: 400px;
   position: absolute;
   padding: 32px;
   border-radius: 24px;
@@ -131,7 +132,6 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 24px;
   border: 1px solid Coral;
   box-shadow: 1px 5px 30px 10px rgb(22, 1, 80);
@@ -170,7 +170,7 @@ th {
 #container__modal .modal form .buttons {
   display: flex;
   width: 100%;
-  gap: 12px;
+  gap: 10px;
 }
 
 #container__modal .modal form button {
@@ -212,7 +212,7 @@ th {
 
 #modalExcluir .modal {
   background-color: white;
-  width: 600px;
+  width: auto;
   position: absolute;
   padding: 32px;
   border-radius: 24px;
@@ -236,4 +236,5 @@ th {
   cursor: pointer;
   padding: 5px;
   margin-top: 15px;
+  margin-left: 30px;
 }
