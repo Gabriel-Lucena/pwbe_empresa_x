@@ -79,7 +79,7 @@ if (
                 <td><?= $funcionario->ip_address ?></td>
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
-                <td><button id="excluir">Aniquilar</button></td>
+                <td><button id="excluir" onclick="deletar(<?= $funcionario->id ?>)">Excluir</button></td>
             </tr>
 
         <?php
@@ -96,17 +96,19 @@ if (
         <div class="modal">
             <h2>Adição de novo funcionário</h2>
             <form>
-                <input type="text" name="first_name" required placeholder="Primeiro nome">
-                <input type="text" name="last_name" required placeholder="Último nome">
-                <input type="text" name="email" required placeholder="Email">
-                <select name="gender" id="gender" required placeholder="Sexo">
-                    <option value="Male">Masculino</option>
-                    <option value="Female">Feminino</option>
-                    <option value="WarMachine">Máquina de Combate</option>
-                </select>
-                <input type="text" name="ip_address" required placeholder="Endereço IP">
-                <input type="text" name="country" required placeholder="País">
-                <input type="text" name="department" required placeholder="Departamento">
+                <div>
+                    <input type="text" name="first_name" required placeholder="Primeiro nome">
+                    <input type="text" name="last_name" required placeholder="Último nome">
+                    <input type="text" name="email" required placeholder="Email">
+                    <select name="gender" id="gender" required placeholder="Sexo">
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Feminino</option>
+                        <option value="WarMachine">Máquina de Combate</option>
+                    </select>
+                    <input type="text" name="ip_address" required placeholder="Endereço IP">
+                    <input type="text" name="country" required placeholder="País">
+                    <input type="text" name="department" required placeholder="Departamento">
+                </div>
                 <div class="buttons">
                     <button id="cancel" type="button">Cancelar</button>
                     <button id="send">Adicionar</button>
@@ -120,9 +122,9 @@ if (
         <div class="modal">
             <h2>Atenção</h2>
             <form>
-                <h3>Você tem certeza que quer destruir a vida desse jovem?</h3>
-                <button id="buttonSim">Quero. Sou maluco.</button>
-                <button id="buttonNao">Pensando bem... acho que não.</button>
+                <h3>Você tem certeza?</h3>
+                <button id="buttonSim">Sim</button>
+                <button id="buttonNao">Não</button>
             </form>
         </div>
     </div>
