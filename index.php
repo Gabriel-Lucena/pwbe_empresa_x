@@ -82,8 +82,8 @@ if (
                 <td>
                     <div id="botoes">
 
-                    <button id="botao" onclick="deletar(<?= $funcionario->id ?>)">Excluir</button>
-                    <button id="botao" onclick="editar(<?= $funcionario->id ?>)">Editar</button>
+                        <button id="botao" onclick="deletar(<?= $funcionario->id ?>)">Excluir</button>
+                        <button id="botaodebaixo" onclick="editar(<?= $funcionario->id ?>)">Editar</button>
 
                     </div>
                 </td>

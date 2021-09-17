@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
+  user-select: none;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 }
 
 input {
-  width: 100%;
+  width: 85%;
   outline: none;
   padding: 5px;
   border: none;
@@ -29,15 +30,17 @@ input {
   border-radius: 5px;
   color: white;
   border: 1px solid Tomato;
+  cursor: pointer;
 }
 
-#excluir {
+#botao {
   background-color: Orange;
   border-radius: 5px;
   color: white;
   border: 1px solid Tomato;
   width: 100px;
   height: 25px;
+  cursor: pointer;
 }
 
 section {
@@ -64,11 +67,7 @@ table {
   text-align: left;
   border: 1px solid Tomato;
   border-collapse: collapse;
-}
-
-table tr:hover {
-  cursor: pointer;
-  /* background-color: rgb(109, 94, 248); */
+  padding: 10vh;
 }
 
 table td,
@@ -237,4 +236,30 @@ th {
   padding: 5px;
   margin-top: 15px;
   margin-left: 30px;
+}
+
+.container-form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#botoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#botaodebaixo {
+  background-color: Orange;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid Tomato;
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+  margin-top: 1vh;
 }
