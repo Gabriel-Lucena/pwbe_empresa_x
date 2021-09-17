@@ -63,7 +63,7 @@ if (
             <th>Endereço IP</th>
             <th>País</th>
             <th>Departamento</th>
-            <th>Excluir?</th>
+            <th>Ações</th>
         </tr>
 
         <?php
@@ -79,7 +79,14 @@ if (
                 <td><?= $funcionario->ip_address ?></td>
                 <td><?= $funcionario->country ?></td>
                 <td><?= $funcionario->department ?></td>
-                <td><button id="excluir" onclick="deletar(<?= $funcionario->id ?>)">Excluir</button></td>
+                <td>
+                    <div id="botoes">
+
+                    <button id="botao" onclick="deletar(<?= $funcionario->id ?>)">Excluir</button>
+                    <button id="botao" onclick="editar(<?= $funcionario->id ?>)">Editar</button>
+
+                    </div>
+                </td>
             </tr>
 
         <?php
